@@ -1,0 +1,244 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Declaring Variables</h1>
+    <script>
+      let x = 5;
+      let y = 10;
+      let z = x + y;
+      document.write(z);
+    </script>
+
+    <h1>Single line variable declaration</h1>
+    <script>
+      var firstName = "gokul",
+        lastName = "krishnan",
+        age = 26;
+      document.write(firstName + " " + lastName);
+      document.write("<br>age -", age);
+    </script>
+
+    <h1>Data Types</h1>
+    <script>
+      //number
+      let a = 100;
+      document.write(typeof a);
+
+      //string
+      let b = "Gokul";
+      document.write("<br>" + typeof b + "<br>");
+
+      //array
+      let c = ["a", "b"];
+      document.write(typeof c);
+
+      //null
+      let d = null;
+      document.write("<br>" + typeof d);
+
+      //undefined
+      let e;
+      document.write("<br>" + typeof e);
+
+      //boolean
+      let f = true;
+      document.write("<br>" + typeof f);
+    </script>
+
+    <h1>Functions</h1>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        document.write("This is javascript");
+      }
+
+      myFunction();
+
+      function myFunction(p1, p2) {
+        return p1 * p2;
+      }
+
+      let result = myFunction(4, 3);
+      document.getElementById("demo").innerHTML = result;
+    </script>
+
+    <h1>Objects</h1>
+
+    <script>
+      const person = {
+        firstName: "Gokul",
+        lastNmae: "krishnan",
+        age: 26,
+      };
+
+      document.write(person.firstName); //extracting information from person object
+      document.write("<br>", person.firstName + " is " + person.age);
+    </script>
+
+    <h1>Events</h1>
+
+    <button onclick="document.write('Hello')">Click me</button>
+
+    <br>
+    <br>
+
+    <div onmouseover="this.style.backgroundColor='green'">Box</div>
+
+    <h1>String</h1>
+
+    <script>
+        //charAt()
+        let str = "hello";
+        document.write(str.charAt(1));
+
+        //concat
+        let str2 = "world";
+        document.write(str.concat(" ", str2));
+
+        //indexOf
+        let str1 = "HELLO World";
+        document.write(str1.indexOf("world"));
+
+        //lastindexof
+        document.write(str1.lastIndexOf("d"));
+
+        //replace
+        document.write(str1.replace("world", "hi"));
+
+        //split
+        document.write(str1.split(" "));
+
+        //substr
+        document.write(str1.substr(0, 4));
+
+        //substring
+        document.write(str1.substring(6, 11));
+
+        //toLowercase
+        document.write(str1.toLowerCase());
+
+        //toUppercase
+        document.write(str1.toUpperCase());
+
+        //trim
+        let str3 = "   hello world    ";
+        document.write(str3.trim());
+
+        //startswith
+        document.write(str1.startsWith("HELLO"));
+
+        //endswith
+        document.write(str1.startsWith("hello"));
+
+        //SLICE
+        let myString = "Hello, world!";
+        let newString = myString.slice(7, 12);
+        document.write(newString);
+
+        //escape character
+        let txt = "we are \"Vikings\" ";
+        document.write(txt);
+
+
+    </script>
+
+    <h1>Array</h1>
+
+
+    <script>
+        //concat
+        document.write("<br>" + "Concat:" + "<br>")
+        let fruits1 = ['apple', 'orange'];
+        let fruits2 = ['grapes', 'kiwi']
+        let concat = fruits1.concat(fruits2);
+        document.write(concat);
+
+        //slice
+        document.write("<br>" + "Slice:" + "<br>")
+        let fruits = ['apple', 'orange', 'grapes', 'kiwi'];
+        let array = fruits.slice(0, 2);
+        document.write(array);
+
+        //splice - adding
+        document.write("<br>" + "Splice:" + "<br>");
+        fruits.splice(1, 0, 'pear',);
+        document.write(fruits);
+        //----------------------------------------------------------------------------
+        //splice - removing
+        document.write("<br>" + "Splice removing:" + "<br>");
+        fruits.splice(1, 1);
+        document.write(fruits);
+
+        //reverse
+        document.write("<br>" + "reverse:" + "<br>");
+        fruits.reverse();
+        document.write(fruits);
+
+        //sort
+        document.write("<br>" + "Sort:" + "<br>");
+        fruits.sort();
+        document.write(fruits);
+
+        //forEach
+        document.write("<br>" + "forEach:" + "<br>");
+        fruits.forEach(function (element) {
+            document.write(element + '' + ' ' + '');
+        })
+
+        //map
+        document.write("<br>" + "map:" + "<br>");
+        let myArray = [1, 2, 3];
+        let newArray = myArray.map(function (element) {
+            return element * 2;
+        });
+        document.write(newArray);
+
+        //filter
+        document.write("<br>" + "filter:" + "<br>");
+        const numbers = [10, 20, 30, 40, 50];
+        const filteredNumbers = numbers.filter(function (number) {
+            return number > 30;
+        });
+        document.write(filteredNumbers); // Output: [40, 50]
+
+        //reduce
+        document.write("<br>" + "forEach:" + "<br>");
+        const number = [10, 20, 30, 40, 50];
+        const sum = number.reduce(function (accumulator, currentValue) {
+            return accumulator + currentValue;
+        }, 0);
+        document.write(sum);
+
+        //find
+        document.write("<br>" + "forEach:" + "<br>");
+        const foundNumber = number.find(function (number) {
+            return number > 30;
+        });
+        document.write(foundNumber);
+
+
+    </script>
+
+    <h1>Dates</h1>
+
+    <script>
+      const date = new Date();
+      document.write(date);
+
+      year = date.getFullYear();
+      document.write(year);
+
+      month = date.getMonth();
+      document.write(month);
+
+      
+    </script>
+  </body>
+</html>
